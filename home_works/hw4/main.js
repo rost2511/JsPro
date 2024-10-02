@@ -1,6 +1,6 @@
 console.log('----- First Task -----')
-const name = prompt('Enter your name');
-console.log(`Hello, ${name}! How are you?`);
+const userName = prompt('Enter your name');
+console.log(`Hello, ${userName}! How are you?`);
 
 console.log('----- Second Task -----')
 const userNumber = prompt('Enter a three-digit number');
