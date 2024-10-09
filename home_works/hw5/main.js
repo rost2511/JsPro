@@ -20,20 +20,26 @@ for (let i = 1; i <= 100; i++) {
 }
 
 console.log('----- Fourth Task -----')
-// Дано ціле число (ввести через 'prompt'). З'ясувати, чи просто воно (простим називається число, більше 1, що не має інших дільників, крім 1 і себе).
-const userSimpleNumber = +prompt('Enter a simple number');
-if (userSimpleNumber < 2) {
-    console.log(`${userSimpleNumber} is not a simple number!`);
-} else if (isNaN(userSimpleNumber)) {
-    console.log(`You enter not a number!`);
+// Дано ціле число (ввести через 'prompt'). 
+// З'ясувати, чи просто воно (простим називається число, більше 1, що не має інших дільників, крім 1 і себе).
+const userSimpleNumber = prompt('Введіть число більше 1');
+if (isNaN(userSimpleNumber)) {
+    console.log(`Це не число!`);
+} else if (userSimpleNumber <= 1) {
+    console.log(`Це не просте число!`);
 } else {
-    for (let i = 2; i <= userSimpleNumber; i++) {
-        if (userSimpleNumber === 2 || userSimpleNumber % i !== 0) {
-            console.log(`${userSimpleNumber} is a simple number!`);
-            break;
-        } else {
-            console.log(`${userSimpleNumber} is not a simple number!`);
+    let isPrime = true;
+    for (let i = 2; i < userSimpleNumber; i++) {
+        if (userSimpleNumber % i === 0) {
+            isPrime = false;
             break;
         }
+        continue
     }
+    if (isPrime) {
+        console.log(`Це просте число!`);
+    } else {
+        console.log(`Це не просте число!`);
+    }
+
 }
