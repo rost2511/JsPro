@@ -3,13 +3,13 @@ console.log('----- First Task -----')
 // 'func(" hello world", ['l', 'd'])' поверне нам "heo wor". 
 // Вихідний рядок та символи для видалення задає користувач.
 function removeFromString(string, arrayOfRemoveLetters) {
-    let resultStrind = '';
+    let resultString = '';
     for (let i = 0; i < string.length; i++) {
         if (!arrayOfRemoveLetters.includes(string[i])) {
-            resultStrind += string[i];
+            resultString += string[i];
         }
     }
-    return resultStrind;
+    return resultString;
 }
 
 console.log(removeFromString('Hello world', ['e', 'l']));
