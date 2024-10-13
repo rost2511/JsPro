@@ -41,5 +41,4 @@ if (isNaN(userSimpleNumber)) {
     } else {
         console.log(`Це не просте число!`);
     }
-
 }
