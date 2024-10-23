@@ -29,8 +29,7 @@ for (let number of arrayOriginal) {
     }
 }
 
-console.log(`Original array = ${arrayOriginal}\nArray of paired numbers = ${arrayOfPairedNumbers}`
-);
+console.log(`Original array = ${arrayOriginal}\nArray of paired numbers = ${arrayOfPairedNumbers}`);
 
 console.log('----- Third Task -----');
 // Створіть об'єкт, який матиме одну властивість з масивом об'єктів. 
@@ -55,26 +54,26 @@ const contactsBook = {
             phoneNumber: '+380973456789',
             email: 'alex@gmail.com'
         }
-    ],
+    ]
+}
 
-    getContactByName: function (name) {
-        for (const contact of this.contacts) {
-            if (contact.name === name) {
-                return contact;
-            }
+contactsBook.getContactByName = function (name) {
+    for (const contact of this.contacts) {
+        if (contact.name === name) {
+            return contact;
         }
-    },
+    }
+}
 
-    showInfoByName: function (name) {
-        const contact = this.getContactByName(name);
-        const contactInfo = `Name = ${contact.name} \nPhone Number = ${contact.phoneNumber} \nEmail = ${contact.email}`;
-        return console.log(contactInfo);
-    },
+contactsBook.showInfoByName = function (name) {
+    const contact = this.getContactByName(name);
+    const contactInfo = `Name = ${contact.name} \nPhone Number = ${contact.phoneNumber} \nEmail = ${contact.email}`;
+    return console.log(contactInfo);
+}
 
-    setNewContact: function (name = 'undefined name', phoneNumber = 'undefined phone number', email = 'undefined email') {
-        const newContact = { name, phoneNumber, email };
-        this.contacts.push(newContact);
-    },
+contactsBook.setNewContact = function (name = 'undefined name', phoneNumber = 'undefined phone number', email = 'undefined email') {
+    const newContact = { name, phoneNumber, email };
+    this.contacts.push(newContact);
 }
 
 contactsBook.showInfoByName('Julia');
