@@ -1,7 +1,6 @@
 console.log('----- First Task -----');
 // Вивести таблицю Піфагора (10×10), таблиця повинна бути створена динамічно
 const table = document.createElement('table');
-
 document.querySelector('#task1').appendChild(table);
 for (let i = 1; i <= 10; i++) {
     const tr = document.createElement('tr');
