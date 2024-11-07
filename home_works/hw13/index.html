@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work 13</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Home work 13</h1>
+    <section class="contact_section">
+        <div class="contact_form">
+            <h5>We would like to help you</h5>
+            <form id="contactForm" action="link.com/send" method="post">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Name">
+                    <p class="error-message" style="color: red; display: none;">Name is required.</p>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Message"
+                        rows="3"></textarea>
+                    <p class="error-message" style="color: red; display: none;">Message must be at least 5
+                        characters.</p>
+                </div>
+                <h6>How to answer you?</h6>
+                <div class="form-group">
+                    <label for="exampleFormControlInput2">Phone number</label>
+                    <input type="tel" name="tel" class="form-control" id="exampleFormControlInput2"
+                        placeholder="Phone number">
+                    <p class="error-message" style="color: red; display: none;">Phone number must start with
+                        +380.</p>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput3">Email address</label>
+                    <input type="email" name="e-mail" class="form-control" id="exampleFormControlInput3"
+                        placeholder="Email">
+                    <p class="error-message" style="color: red; display: none;">Email must contain "@" and a
+                        dot.</p>
+                </div>
+                <div class="text-center send_message d-flex justify-content-center align-items-center">
+                    <button class="btn" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
