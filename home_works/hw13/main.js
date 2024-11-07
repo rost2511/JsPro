@@ -1,7 +1,16 @@
+console.log('----- First Task -----');
+// Доробити валідацію для надсилання повідомлення з використанням регулярних виразів:
+// Поля:
+// Name - обов'язкове текстове поле
+// Message - текстове поле не менше 5 символів
+// Phone number - обов'язкове поле типу phone. З початком на +380
+// Email - email обов'язково повинен мати @ та крапку
+// Після відправки, в консоль відображаємо дані, які ввів користувач.
+// Під час помилки показувати її під полем.
+
 document.querySelector('#contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // Получаем поля
     const name = document.querySelector('#exampleFormControlInput1');
     const message = document.querySelector('#exampleFormControlTextarea1');
     const phone = document.querySelector('#exampleFormControlInput2');
@@ -40,12 +49,6 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
     }
 
     if (isValid) {
-        // console.log({
-        //     name: name.value.trim(),
-        //     message: message.value.trim(),
-        //     phone: phone.value.trim(),
-        //     email: email.value.trim()
-        // });
         const formData = new FormData(event.target);
         const formObj = {};
 
