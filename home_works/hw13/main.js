@@ -40,11 +40,17 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
     }
 
     if (isValid) {
-        console.log({
-            name: name.value.trim(),
-            message: message.value.trim(),
-            phone: phone.value.trim(),
-            email: email.value.trim()
-        });
+        // console.log({
+        //     name: name.value.trim(),
+        //     message: message.value.trim(),
+        //     phone: phone.value.trim(),
+        //     email: email.value.trim()
+        // });
+        const formData = new FormData(event.target);
+        const formObj = {};
+
+        formData.forEach((value, key) => formObj[key] = value)
+
+        console.log(formObj);
     }
 });
