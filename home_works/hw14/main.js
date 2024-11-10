@@ -43,7 +43,7 @@ arrowNext.addEventListener('click', () => {
 document.querySelector('.dots').addEventListener('click', (event) => {
     if (event.target.classList.contains('dot')) {
         const newIndex = [...dots].indexOf(event.target);
-        if (newIndex !== -1) changeSlide(newIndex);
+        changeSlide(newIndex);
     }
 });
 
